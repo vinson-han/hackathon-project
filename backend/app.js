@@ -4,7 +4,7 @@ const collection = require('./mongo')
 const cors = require('cors')
 const bcrypt = require('bcrypt')
 const axios = require('axios')
-const OpenAI = require('openAi')
+const OpenAI = require('openai')
 
 
 const app = express()
