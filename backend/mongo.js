@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 //connect to MongoDB database using database url (usually stored in env file but was not working, temporarily hardcoding it)
 
-mongoose.connect(process.env.VITE_DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://kevinngstem:77TUpi6k5ohHoK6q@hackathon-project.aorxavu.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log('MongoDB connected');
     })

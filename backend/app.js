@@ -7,9 +7,12 @@ const bcrypt = require('bcrypt')
 //import necessary dependancies and the collection we declared which holds our database data
 
 //create an instance of express 
+require('dotenv').config();
 const app = express()
 
 //middleware functions to parse JSON and URL-encoded data in requests and enable cors
+
+
 app.use(express.static("dist"));
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
