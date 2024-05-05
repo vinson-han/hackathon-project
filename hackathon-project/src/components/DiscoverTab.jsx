@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const tabs = [];
 
@@ -30,7 +31,8 @@ export default function DiscoverTab({ handleClick, tabs }) {
             {" "}
             {/* Centering the tabs */}
             {tabs.map((tab) => (
-              <a
+              <Link
+                to={tab.href}
                 key={tab.name}
                 onClick={(e) => handleClick(e)}
                 href={tab.href}
@@ -43,7 +45,7 @@ export default function DiscoverTab({ handleClick, tabs }) {
                 aria-current={tab.current ? "page" : undefined}
               >
                 {tab.name}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>
