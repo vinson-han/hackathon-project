@@ -1,14 +1,17 @@
+require('dotenv').config();
 const express = require("express");
 const collection = require('./mongo')
 const cors = require('cors')
 const bcrypt = require('bcrypt')
+const axios = require('axios')
+const OpenAI = require('openAi')
 
 
-//import necessary dependancies and the collection we declared which holds our database data
-
-//create an instance of express 
-require('dotenv').config();
 const app = express()
+const openai = new OpenAI({
+    apiKey: process.env.VITE_OPENAI_API_KEY 
+})
+
 
 //middleware functions to parse JSON and URL-encoded data in requests and enable cors
 
@@ -20,15 +23,41 @@ app.use(cors())
 app.use('/', express.static('dist'))
 
 
-app.get('/test', (req,res) => {
-    res.send("Testing")
-})
+app.post('/api/openAi', async (req,res) => {
 
+   
 
+    if(!req.body){
+        return res.status(400).json("No Body")
+    }
+    
+
+    let prompt = req.body.question
+
+    console.log(prompt)
+    try {
+        const chatCompletion = await openai.chat.completions.create({
+            messages: [{ role: 'assistant', content: prompt }],
+            model: 'gpt-3.5-turbo',
+            max_tokens: 150
+          });
+          
+          const message = chatCompletion.choices[0].message.content
+          console.log(message)
+          
+          return res.status(200).json(message);
+
+        }catch(error){
+            console.log(error)
+            return res.status(400).json({message: "Some Error"})
+        }
+             
+    })
 
 //route defined to handle get requests to discover enpoint
 app.get('/discover', cors(), (req, res) => {
-    
+       
+    res.send('testing')
 
 })
 
