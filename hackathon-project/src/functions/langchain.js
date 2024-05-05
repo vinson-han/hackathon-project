@@ -11,10 +11,11 @@ const llm = new OpenAI({
 });
 
 export async function getAnswer(question) {
-  let answer = "Should return an Answer";
+  let answer =
+    "Should return an Answer - Need to replace key ChatGPT Key - IF key is expose, key will become invalid?";
   try {
-    answer = await llm.invoke(question);
-
+    // answer = await llm.invoke(question);
+    console.log(answer);
     return answer;
   } catch (e) {
     console.error(e);
