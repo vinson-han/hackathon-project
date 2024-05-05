@@ -17,12 +17,18 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cors())
-app.use('/', express.static('/build'))
+app.use('/', express.static('/dist'))
+
+
+app.get('/test', (req,res) => {
+    res.send("Testing")
+})
+
 
 
 //route defined to handle get requests to discover enpoint
 app.get('/discover', cors(), (req, res) => {
-
+    
 
 })
 
