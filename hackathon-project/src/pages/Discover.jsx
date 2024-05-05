@@ -13,8 +13,8 @@ function Discovery() {
   const tabs = [
     { name: "UX UI Design", href: "/discover", current: true },
     { name: "Web Development", href: "/discoverWeb", current: false },
-    { name: "Cyber Security", href: "#", current: false },
-    { name: "Data Analysis", href: "#", current: false },
+    { name: "Cyber Security", href: "/discoverCyber", current: false },
+    { name: "Data Analysis", href: "/discoverData", current: false },
   ];
 
   const [text, setText] = useState("UI UX Design");
