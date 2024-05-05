@@ -13,11 +13,11 @@ const app = express()
 //middleware functions to parse JSON and URL-encoded data in requests and enable cors
 
 
-app.use(express.static("dist"));
+
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cors())
-
+app.use('/', express.static('/build'))
 
 
 //route defined to handle get requests to discover enpoint
