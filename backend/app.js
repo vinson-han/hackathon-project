@@ -16,6 +16,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
 
+
 //route defined to handle get requests to discover enpoint
 app.get('/discover', cors(), (req, res) => {
 
