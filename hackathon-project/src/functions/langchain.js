@@ -20,10 +20,7 @@ export async function getAnswer(question) {
 
     const object = { question: question };
 
-    const response = await axios.post(
-      "http://localhost:8000/api/openAi",
-      object
-    );
+    const response = await axios.post("/api/openAi", object);
     const data = response.data;
     return data;
   } catch (e) {
