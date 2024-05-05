@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development nodemon --env-file=.env app.js ",
     "build:ui": "rm -rf dist && cd ../hackathon-project && npm run build && cp -r dist ../backend",
-    "start": "cross-env NODE_ENV=production node --env-file=.env app.js"
+    "start": "cross-env NODE_ENV=production node app.js"
    
   },
   "author": "",
