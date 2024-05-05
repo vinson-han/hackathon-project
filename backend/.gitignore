@@ -27,5 +27,5 @@ dist-ssr
 
 .env
 .prettierrc
-dist
+
 test.js
