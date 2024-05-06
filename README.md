@@ -9,6 +9,10 @@
 
 <br></br>
 
+https://hackathon-project.onrender.com/
+
+<br></br>
+
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -31,21 +35,6 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 <br></br>
 
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-<br></br>
-
-### Installation
-
-Project installation steps go here
-
-<br></br>
-
-
 ### Local Development Hosting/Testing
 
 Clone repository "https://github.com/kevinngonzales/hackathon-project.git"
@@ -61,6 +50,8 @@ In terminal run "npm start" to start beckend server
 In terminal run "npm run dev" to start frontend localhost developmental server 
 
 (Ctrl + Click) the url in the terminal to open the webpage.
+
+<br></br>
 
 <!-- LICENSE -->
 ## License
