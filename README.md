@@ -37,7 +37,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 ### Local Development Hosting/Testing
 
-Clone repository "https://github.com/kevinngonzales/hackathon-project.git"
+Clone repository "https://github.com/vinson-han/hackathon-project.git"
 
 Open with VS Code
 
