@@ -18,7 +18,7 @@ function Login() {
   async function submit(e) {
     e.preventDefault();
 
-    const response = await axios.post("http://localhost:8000/login", {
+    const response = await axios.post("/login", {
       email,
       password,
     });
@@ -36,10 +36,9 @@ function Login() {
       <section>
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <div class="w-full  md:mt-0 sm:max-w-md xl:p-0 ">
-
-          <div class='flex justify-center pt-12'>
-                <img src="logo.svg"></img>
-              </div>
+            <div class="flex justify-center pt-12">
+              <img src="logo.svg"></img>
+            </div>
 
             <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
               <h1 class="flex justify-center text-xl font-bold leading-tight tracking-tight md:text-2xl dark:text-white">
@@ -93,12 +92,11 @@ function Login() {
                   </button>
 
                   <div class="flex justify-center space-x-1 text-md">
-                      <div>Dont't have an account?</div>
-                      <Link class="text-tertiary" to="/signup">
-                        Sign up
-                      </Link>
-                    </div>
-
+                    <div>Dont't have an account?</div>
+                    <Link class="text-tertiary" to="/signup">
+                      Sign up
+                    </Link>
+                  </div>
                 </form>
               )}
             </div>
