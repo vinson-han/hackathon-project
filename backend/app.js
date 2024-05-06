@@ -121,10 +121,10 @@ app.post('/signup', async (req, res) => {
         // Save the new user to the database
         await newUser.save();
 
-        res.json('notexist'); // User successfully created
+        return res.status(200).json('notexist'); // User successfully created
     } catch (error) {
         console.error(error);
-        res.status(500).json('error');
+        return res.status(500).json('error');
     }
 });
 
