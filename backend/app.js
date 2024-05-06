@@ -105,7 +105,7 @@ app.post('/signup', async (req, res) => {
         const existingUser = await collection.findOne({ email: email });
 
         if (existingUser) {
-            return res.json('exist'); // Email already exists
+            return res.json('notexist'); // Email already exists
         }
 
         // Hash the password
@@ -121,10 +121,10 @@ app.post('/signup', async (req, res) => {
         // Save the new user to the database
         await newUser.save();
 
-        return res.status(200).json('notexist'); // User successfully created
+        return res.status(200).json('exist'); // User successfully created
     } catch (error) {
         console.error(error);
-        return res.status(500).json('error');
+        res.status(500).json('error');
     }
 });
 
