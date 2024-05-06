@@ -29,7 +29,7 @@ function Signup() {
       if (response.data === "exist") {
         alert("User already exists");
       } else if (response.data === "notexist") {
-        await axios.post("http://localhost:8000/login", {
+        await axios.post("/login", {
           email,
           password,
         });
